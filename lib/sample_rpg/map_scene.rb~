@@ -1,4 +1,0 @@
-module SampleRPG
-  class MapScene
-  end
-end
