@@ -1,0 +1,15 @@
+require "starruby"
+
+module SampleRPG
+  module Font
+
+    module_function
+
+    def [](size)
+      (@fonts ||= Hash.new do |hash, key|
+         hash[key] = StarRuby::Font.new(File.join(File.dirname(__FILE__), "../fonts/bdfmplus.ttf"), 12)
+       end)[size]
+    end
+
+  end
+end
